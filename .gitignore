@@ -1,0 +1,42 @@
+# ----------------------------------------------------------------------
+# Seyoung Gunjae WordPress Project .gitignore
+# ----------------------------------------------------------------------
+
+# Ignore everything in the root directory by default
+/*
+
+# Allow specific files/directories at the root
+!/.gitignore
+!/README.md
+!/*.md
+!/sample-data/
+!/docs/
+
+# ----------------------------------------------------------------------
+# wp-content Rules
+# ----------------------------------------------------------------------
+# Ignore everything in wp-content
+/wp-content/*
+
+# But allow themes and plugins directories themselves
+!/wp-content/themes/
+!/wp-content/plugins/
+
+# ----------------------------------------------------------------------
+# Themes Rules
+# ----------------------------------------------------------------------
+# Ignore all themes
+/wp-content/themes/*
+
+# But track only the custom child theme
+!/wp-content/themes/seyoung-theme/
+
+# ----------------------------------------------------------------------
+# Plugins Rules
+# ----------------------------------------------------------------------
+# Ignore all plugins
+/wp-content/plugins/*
+
+# But track only our custom plugins starting with seyoung-
+!/wp-content/plugins/seyoung-*/
+!/wp-content/plugins/seyoung-**/
