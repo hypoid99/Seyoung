@@ -21,9 +21,11 @@ Text Domain: seyoung-theme
     --sy-light-beige: #FAF8F5;   /* 메인 바디 배경색 (초광대역 베이지) */
     --sy-white: #FFFFFF;         /* 콘텐츠 카드용 */
     --sy-gray-border: #E5E0D8;   /* 경계선용 연한 그레이-베이지 */
+    --sy-accent-gold: #D4AF37;   /* 골드 메탈릭 포인트 */
 
     /* Typography */
     --sy-font-main: 'Outfit', 'Noto Sans KR', sans-serif;
+    --sy-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* ----------------------------------------------------------------------
@@ -33,31 +35,412 @@ body {
     background-color: var(--sy-light-beige) !important;
     color: var(--sy-dark-brown);
     font-family: var(--sy-font-main);
+    margin: 0;
+    padding: 0;
 }
 
-/* Header & Navigation */
-.main-header-bar, .ast-builder-menu-1 {
+/* Header & Navigation Overrides */
+.main-header-bar, .ast-builder-menu-1, .site-header {
     background-color: var(--sy-dark-brown) !important;
+    border-bottom: 2px solid var(--sy-brown) !important;
 }
 
-.main-header-bar a, .ast-builder-menu-1 a {
+.main-header-bar a, .ast-builder-menu-1 a, .site-title a {
     color: var(--sy-light-beige) !important;
+    transition: var(--sy-transition);
 }
 
-.main-header-bar a:hover, .ast-builder-menu-1 a:hover {
-    color: var(--sy-beige) !important;
+.main-header-bar a:hover, .ast-builder-menu-1 a:hover, .site-title a:hover {
+    color: var(--sy-white) !important;
 }
 
 /* Footer overrides */
 .site-footer {
     background-color: var(--sy-dark-brown) !important;
     color: var(--sy-light-beige) !important;
+    border-top: 3px solid var(--sy-brown) !important;
+    padding: 20px 0;
 }
 
 .site-footer a {
     color: var(--sy-beige) !important;
+    transition: var(--sy-transition);
 }
 
 .site-footer a:hover {
     color: var(--sy-white) !important;
+}
+
+/* ----------------------------------------------------------------------
+ * 3. Custom Home Page Styling (.sy-home-wrapper)
+ * ---------------------------------------------------------------------- */
+.sy-home-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Buttons */
+.sy-btn {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: var(--sy-transition);
+    cursor: pointer;
+    text-align: center;
+}
+
+.sy-btn-primary {
+    background-color: var(--sy-brown);
+    color: var(--sy-white) !important;
+    border: 1px solid var(--sy-brown);
+}
+
+.sy-btn-primary:hover {
+    background-color: var(--sy-dark-brown);
+    border-color: var(--sy-dark-brown);
+    transform: translateY(-2px);
+}
+
+.sy-btn-secondary {
+    background-color: transparent;
+    color: var(--sy-dark-brown) !important;
+    border: 2px solid var(--sy-dark-brown);
+}
+
+.sy-btn-secondary:hover {
+    background-color: var(--sy-dark-brown);
+    color: var(--sy-white) !important;
+    transform: translateY(-2px);
+}
+
+.sy-btn-accent {
+    background-color: var(--sy-accent-gold);
+    color: var(--sy-dark-brown) !important;
+    border: 1px solid var(--sy-accent-gold);
+}
+
+.sy-btn-accent:hover {
+    background-color: #C19A2E;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.sy-hero-section {
+    position: relative;
+    background: linear-gradient(135deg, #F0EAE1 0%, #D7CCC8 100%);
+    padding: 120px 20px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sy-hero-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.sy-hero-tagline {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--sy-brown);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.sy-hero-title {
+    font-size: 44px;
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--sy-dark-brown);
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.sy-hero-desc {
+    font-size: 18px;
+    color: var(--sy-brown);
+    margin-bottom: 35px;
+    line-height: 1.6;
+}
+
+.sy-hero-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* Section Common Header */
+.sy-section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.sy-section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--sy-dark-brown);
+    margin-bottom: 10px;
+}
+
+.sy-section-subtitle {
+    font-size: 15px;
+    color: var(--sy-light-brown);
+}
+
+.sy-section-divider {
+    width: 50px;
+    height: 3px;
+    background-color: var(--sy-brown);
+    margin: 15px auto 0 auto;
+}
+
+/* Categories Section */
+.sy-categories-section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sy-categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.sy-category-card {
+    background-color: var(--sy-white);
+    border: 1px solid var(--sy-gray-border);
+    border-radius: 8px;
+    padding: 35px 25px;
+    text-decoration: none !important;
+    color: var(--sy-dark-brown) !important;
+    transition: var(--sy-transition);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+.sy-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(93, 64, 55, 0.08);
+    border-color: var(--sy-brown);
+}
+
+.sy-category-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.sy-category-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.sy-category-desc {
+    font-size: 14px;
+    color: var(--sy-light-brown);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.sy-category-arrow {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--sy-brown);
+    display: inline-block;
+    transition: var(--sy-transition);
+}
+
+.sy-category-card:hover .sy-category-arrow {
+    transform: translateX(5px);
+}
+
+/* Products Section */
+.sy-products-section {
+    padding: 80px 20px;
+    background-color: var(--sy-beige);
+}
+
+.sy-products-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.sy-product-card {
+    background-color: var(--sy-white);
+    border-radius: 8px;
+    border: 1px solid var(--sy-gray-border);
+    overflow: hidden;
+    transition: var(--sy-transition);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.sy-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.06);
+}
+
+.sy-product-img-link {
+    display: block;
+    width: 100%;
+}
+
+.sy-product-image {
+    width: 100%;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--sy-light-beige);
+    position: relative;
+}
+
+.sy-sale-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--sy-brown);
+    color: var(--sy-white);
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.sy-product-info {
+    padding: 20px;
+}
+
+.sy-product-cat {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--sy-light-brown);
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.sy-product-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+.sy-product-title a {
+    color: var(--sy-dark-brown) !important;
+    text-decoration: none !important;
+}
+
+.sy-product-title a:hover {
+    color: var(--sy-brown) !important;
+}
+
+.sy-product-price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--sy-gray-border);
+    padding-top: 15px;
+}
+
+.sy-product-price {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--sy-brown);
+}
+
+.sy-product-price del {
+    font-size: 13px;
+    color: var(--sy-light-brown);
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+.sy-product-price ins {
+    text-decoration: none;
+}
+
+.sy-product-cart-btn {
+    background-color: var(--sy-beige);
+    border: 1px solid var(--sy-gray-border);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--sy-dark-brown);
+    text-decoration: none !important;
+    transition: var(--sy-transition);
+}
+
+.sy-product-cart-btn:hover {
+    background-color: var(--sy-brown);
+    color: var(--sy-white);
+    border-color: var(--sy-brown);
+}
+
+/* Call to Action (CTA) Section */
+.sy-cta-section {
+    background: linear-gradient(135deg, var(--sy-dark-brown) 0%, #1A0D0A 100%);
+    padding: 80px 20px;
+    text-align: center;
+    color: var(--sy-light-beige);
+}
+
+.sy-cta-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sy-cta-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--sy-white);
+    margin-bottom: 15px;
+}
+
+.sy-cta-section p {
+    font-size: 16px;
+    color: var(--sy-beige);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* ----------------------------------------------------------------------
+ * 4. Responsive Media Queries
+ * ---------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .sy-hero-title {
+        font-size: 32px;
+    }
+    
+    .sy-hero-desc {
+        font-size: 15px;
+    }
+
+    .sy-hero-actions {
+        flex-direction: column;
+        gap: 10px;
+        align-items: stretch;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .sy-section-title {
+        font-size: 26px;
+    }
+    
+    .sy-cta-section h2 {
+        font-size: 24px;
+    }
 }
