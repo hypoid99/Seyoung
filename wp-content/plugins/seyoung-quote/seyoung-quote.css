@@ -1,0 +1,128 @@
+/**
+ * Seyoung Quote Stylesheet
+ */
+.sy-quote-form-wrap {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E0D8;
+    border-radius: 8px;
+    padding: 35px;
+    margin: 40px auto;
+    max-width: 850px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+    color: #3E2723; /* Dark Walnut Brown */
+}
+
+.sy-quote-form-title {
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #3E2723;
+}
+
+.sy-quote-form-subtitle {
+    font-size: 14px;
+    color: #8D6E63;
+    margin-top: 0;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.sy-quote-form .sy-quote-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+}
+
+.sy-quote-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.sy-quote-form label {
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #5D4037; /* Medium Brown */
+}
+
+.sy-quote-form label .required {
+    color: #C62828;
+    margin-left: 2px;
+}
+
+.sy-quote-form input[type="text"],
+.sy-quote-form input[type="email"],
+.sy-quote-form select,
+.sy-quote-form textarea {
+    border: 1px solid #E5E0D8;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 14px;
+    color: #3E2723;
+    outline: none;
+    background-color: #FFFFFF;
+    transition: border-color 0.2s ease;
+}
+
+.sy-quote-form input[type="text"]:focus,
+.sy-quote-form input[type="email"]:focus,
+.sy-quote-form select:focus,
+.sy-quote-form textarea:focus {
+    border-color: #5D4037;
+}
+
+.sy-quote-form input[type="file"] {
+    padding: 8px 0;
+    font-size: 13px;
+    color: #5D4037;
+}
+
+.sy-quote-actions {
+    border-top: 1px solid #E5E0D8;
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.sy-quote-actions button {
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Alerts */
+.sy-quote-alert {
+    padding: 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 20px auto;
+    max-width: 850px;
+}
+
+.sy-quote-alert.success {
+    background-color: #E8F5E9;
+    color: #2E7D32;
+    border: 1px solid #C8E6C9;
+}
+
+.sy-quote-alert.error {
+    background-color: #FFEBEE;
+    color: #C62828;
+    border: 1px solid #FFCDD2;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .sy-quote-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .sy-quote-form-wrap {
+        padding: 20px 15px;
+        margin: 20px 15px;
+    }
+}

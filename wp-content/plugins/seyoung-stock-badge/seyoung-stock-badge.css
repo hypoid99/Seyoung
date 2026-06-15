@@ -1,0 +1,48 @@
+/**
+ * Seyoung Stock Badge Stylesheet
+ */
+.sy-stock-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+}
+
+/* Low Stock (Urgency Orange-Red) */
+.sy-stock-badge.low-stock {
+    background-color: #FFF3E0; /* Soft warm orange background */
+    color: #E65100; /* Deep warning orange-red */
+    border: 1px solid #FFE0B2;
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Out of Stock (Neutral Gray-Brown) */
+.sy-stock-badge.out-of-stock {
+    background-color: #EFEBE9; /* Soft brown-gray background */
+    color: #5D4037; /* Medium Walnut Brown */
+    border: 1px solid #D7CCC8;
+}
+
+/* Loop placement wrapper margin */
+.sy-stock-badge-loop-wrap {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Pulsing effect for low stock */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
