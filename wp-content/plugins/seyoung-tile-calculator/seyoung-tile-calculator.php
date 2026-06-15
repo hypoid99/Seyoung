@@ -58,6 +58,7 @@ function seyoung_tile_calc_display_calculator() {
     if ( empty( $tile_area ) || floatval( $tile_area ) <= 0 ) {
         return; // Only display calculator if box area is set and greater than zero
     }
+
     
     // Load script and style
     wp_enqueue_script( 'seyoung-tile-calculator-js' );
