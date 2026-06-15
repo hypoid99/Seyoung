@@ -1,0 +1,133 @@
+/**
+ * Seyoung Tile Calculator Stylesheet
+ */
+.seyoung-tile-calculator-wrap {
+    background-color: #FAF8F5; /* Light warm beige */
+    border: 1px solid #E5E0D8; /* Gray-beige border */
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 25px;
+    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+    color: #3E2723; /* Dark Walnut Brown */
+}
+
+.tile-calc-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #3E2723;
+}
+
+.tile-calc-subtitle {
+    font-size: 12px;
+    color: #8D6E63; /* Light Brown */
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+
+.tile-calc-inputs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.tile-calc-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.tile-calc-field label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #5D4037; /* Medium Brown */
+}
+
+.tile-calc-field input,
+.tile-calc-field select {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E0D8;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: #3E2723;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.tile-calc-field input:focus,
+.tile-calc-field select:focus {
+    border-color: #5D4037;
+}
+
+.tile-calc-results {
+    background-color: #F5F1EA; /* Deeper Beige */
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border: 1px dashed #E5E0D8;
+}
+
+.tile-calc-res-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+.tile-calc-res-item:not(:last-child) {
+    border-right: 1px solid #E5E0D8;
+}
+
+.res-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: #8D6E63;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.res-value {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.res-value strong {
+    font-size: 18px;
+    font-weight: 800;
+    color: #3E2723;
+}
+
+.res-value.highlight strong {
+    color: #5D4037; /* Highlighted brown price */
+}
+
+.tile-calc-note {
+    font-size: 11px;
+    color: #8D6E63;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Responsive adjust */
+@media (max-width: 600px) {
+    .tile-calc-inputs {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .tile-calc-results {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tile-calc-res-item:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #E5E0D8;
+        padding-bottom: 8px;
+    }
+}
