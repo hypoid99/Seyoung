@@ -1,0 +1,277 @@
+/**
+ * Seyoung Construction Gallery Stylesheet
+ */
+.sy-gallery-wrap {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Outfit', 'Noto Sans KR', sans-serif;
+    color: #3E2723;
+}
+
+.sy-gallery-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sy-gallery-header h3 {
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #3E2723;
+}
+
+.sy-gallery-header p {
+    font-size: 15px;
+    color: #8D6E63;
+    margin: 0;
+}
+
+/* Grid Layout */
+.sy-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.sy-gallery-card {
+    background-color: #FFFFFF;
+    border: 1px solid #E5E0D8;
+    border-radius: 8px;
+    overflow: hidden;
+    text-decoration: none !important;
+    color: #3E2723 !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.sy-gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(93, 64, 55, 0.08);
+    border-color: #5D4037;
+}
+
+.sy-gallery-img {
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    background-position: center;
+    background-color: #FAF8F5;
+    border-bottom: 1px solid #E5E0D8;
+}
+
+.sy-gallery-info {
+    padding: 20px;
+}
+
+.sy-gallery-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.sy-gallery-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: #5D4037;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.sy-gallery-card:hover .sy-gallery-link {
+    transform: translateX(5px);
+}
+
+/* ----------------------------------------------------------------------
+ * Single Gallery Detail CSS
+ * ---------------------------------------------------------------------- */
+.sy-gallery-detail-wrap {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E0D8;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+.sy-gallery-detail-header {
+    border-bottom: 2px solid #5D4037;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.sy-gallery-detail-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #3E2723;
+}
+
+.sy-gallery-detail-meta {
+    font-size: 13px;
+    color: #8D6E63;
+}
+
+.sy-gallery-detail-desc {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #3E2723;
+    margin-bottom: 40px;
+}
+
+/* Before / After Section */
+.sy-gallery-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.sy-gallery-photo-box {
+    position: relative;
+    border: 1px solid #E5E0D8;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.sy-gallery-photo-box img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    display: block;
+}
+
+.sy-gallery-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 4px;
+    color: #FFFFFF;
+    letter-spacing: 1px;
+}
+
+.sy-gallery-badge.before {
+    background-color: #795548; /* Medium greyish brown */
+}
+
+.sy-gallery-badge.after {
+    background-color: #5D4037; /* Dark gold-brown */
+}
+
+/* Tagged Products Section */
+.sy-gallery-tagged-section {
+    border-top: 1px solid #E5E0D8;
+    padding-top: 30px;
+    margin-top: 40px;
+}
+
+.sy-gallery-tagged-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #5D4037;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sy-gallery-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.sy-gallery-product-card {
+    background-color: #FAF8F5;
+    border: 1px solid #E5E0D8;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.sy-gallery-product-card:hover {
+    border-color: #5D4037;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+}
+
+.sy-gallery-prod-img {
+    width: 100%;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    border: 1px solid #E5E0D8;
+}
+
+.sy-gallery-prod-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #3E2723;
+    margin-top: 0;
+    margin-bottom: 8px;
+    height: 38px;
+    overflow: hidden;
+    line-height: 1.4;
+}
+
+.sy-gallery-prod-name a {
+    color: #3E2723;
+    text-decoration: none;
+}
+
+.sy-gallery-prod-name a:hover {
+    color: #8D6E63;
+}
+
+.sy-gallery-prod-price {
+    font-size: 14px;
+    font-weight: 800;
+    color: #5D4037;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.sy-gallery-buy-btn {
+    display: block;
+    background-color: #5D4037;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 0;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.sy-gallery-buy-btn:hover {
+    background-color: #3E2723;
+}
+
+/* Responsive adjust */
+@media (max-width: 768px) {
+    .sy-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sy-gallery-comparison {
+        grid-template-columns: 1fr;
+    }
+    
+    .sy-gallery-photo-box img {
+        height: 240px;
+    }
+
+    .sy-gallery-detail-wrap {
+        padding: 15px;
+    }
+}
